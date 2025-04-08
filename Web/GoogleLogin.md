@@ -47,8 +47,24 @@ dsh=S18268863%3A1744070279246520
 [진정한 남자들은 DB를 쓰지 않습니다 애플코딩](https://www.youtube.com/watch?v=pCOBmmJARPE)
 
 - <details open>
-  <summary>url, uri, origin 차이가 뭐지?</summary>
+  <summary>url, uri 차이가 뭐지?</summary>
     URI 는 URL 을 포함한 더 큰 포괄적 개념입니다. 인터넷상에서 해당 리소스를 식별할수 있는 문자열을 뜻함.
     URL 은 해당 리소스로 접근할수 있는 프로토콜도 들어가야함.
     URN 은 자원의 이름만 식별되고, 식별, 위치는 모릅니다.
+  </details>
+- <details open>
+  <summary>오리진과 리소스의 차이?</summary>
+  리소스는 인터넷상에 html, json 같은 말그대로 자원 그자체이다.
+  오리진은 보안정책에서 해당 리소스의 출처를 알아낼때 나오는 용어인데, 프로토콜, 호스트, 포트를 통해 출처를 파악한다.
+  이는 CORS 에서 보통 다룬다.
+  </details>
+- <details open>
+  <summary>CORS 는 뭐야?</summary>
+  Cross origin resource sharing 으로 서로다른 오리진끼리의 요청들을 제어하는 브라우저의 보안정책입니다. 브라우저에서 현재 오리진 A에서 다른 오리진 B에 온 응답 읽기(read access)에 대해 기본적으로 차단함. 이는 클라이언트를 보호하기 위해서이다.
+  </details>
+- <details open>
+  <summary>preflight 는 언제 발생하는가?</summary>
+  POST,GET,HEAD 요청아닌경우
+  Content-Type 이 `applicaion/x-www-form-urlencoded`, `multipart/form-data`, `text/plain`
+  특수한 해더(`Authorization`, `X-Custom-Header`) 등 포함된 경우
   </details>
